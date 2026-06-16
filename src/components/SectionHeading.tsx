@@ -26,7 +26,7 @@ export function SectionHeading({
         <p className="label-eyebrow">{eyebrow}</p>
       </Reveal>
       <Reveal delay={0.05}>
-        <h2 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl">
+        <h2 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-foreground sm:text-5xl">
           {title}
         </h2>
       </Reveal>

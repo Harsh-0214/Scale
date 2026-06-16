@@ -10,6 +10,7 @@ import { NAV_LINKS } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { ScaleWordmark } from "@/components/logo/ScaleWordmark";
 import { ScaleIcon } from "@/components/logo/ScaleIcon";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +36,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-white/10 bg-black/80 backdrop-blur-md"
+          ? "border-b border-foreground/10 bg-background/80 backdrop-blur-md"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -45,7 +46,7 @@ export function Navbar() {
       >
         <Link
           href="/"
-          className="rounded-md text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="rounded-md text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           aria-label="Scale — home"
         >
           <ScaleWordmark />
@@ -56,7 +57,7 @@ export function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-white"
+                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {link.label}
               </Link>
@@ -64,16 +65,19 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          <ThemeToggle />
           <Button asChild size="sm">
             <Link href="/contact">Book a Call</Link>
           </Button>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className="inline-flex size-10 items-center justify-center rounded-md text-white md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        <div className="flex items-center gap-1.5 md:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            className="inline-flex size-10 items-center justify-center rounded-md text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -101,7 +105,8 @@ export function Navbar() {
               </motion.span>
             )}
           </AnimatePresence>
-        </button>
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
@@ -113,7 +118,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-0 top-16 z-40 flex flex-col bg-black md:hidden"
+            className="fixed inset-0 top-16 z-40 flex flex-col bg-background md:hidden"
           >
             <motion.div
               initial="hidden"
@@ -134,7 +139,7 @@ export function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block border-b border-white/10 py-5 text-3xl font-bold tracking-tight text-white"
+                    className="block border-b border-foreground/10 py-5 text-3xl font-bold tracking-tight text-foreground"
                   >
                     {link.label}
                   </Link>

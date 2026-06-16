@@ -9,16 +9,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        // White pill on black — the primary CTA
+        // Foreground pill on background — the primary CTA
         default:
-          "bg-white text-black hover:bg-white/90 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_rgba(255,255,255,0.18)]",
+          "bg-foreground text-background hover:bg-foreground/90 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_var(--glow)]",
         // Outlined ghost button for secondary actions
         outline:
-          "border border-white/25 bg-transparent text-white hover:border-white/60 hover:bg-white/5 hover:-translate-y-0.5",
-        ghost: "bg-transparent text-white hover:bg-white/10",
+          "border border-foreground/25 bg-transparent text-foreground hover:border-foreground/60 hover:bg-foreground/5 hover:-translate-y-0.5",
+        ghost: "bg-transparent text-foreground hover:bg-foreground/10",
         // Inverted: black pill for use on white cards
-        inverted: "bg-black text-white hover:bg-black/85 hover:-translate-y-0.5",
-        link: "text-white underline-offset-4 hover:underline",
+        inverted: "bg-background text-foreground hover:bg-background/85 hover:-translate-y-0.5",
+        link: "text-foreground underline-offset-4 hover:underline",
       },
       size: {
         default: "h-11 px-6 py-2",

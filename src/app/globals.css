@@ -1,6 +1,40 @@
 @import "tailwindcss";
 
+/* Drive the `dark:` variant from the .dark class on <html> (set by the
+   no-FOUC script) instead of the OS media query, so the in-page toggle works. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Light theme (default) */
 :root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+
+  --muted: #6f6f6f;
+  --muted-foreground: #52525b;
+
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+
+  --border: rgba(0, 0, 0, 0.1);
+  --input: rgba(0, 0, 0, 0.14);
+  --ring: rgba(0, 0, 0, 0.4);
+
+  --accent: #0a0a0a;
+
+  /* Theme-aware decorative tokens */
+  --grid-line: rgba(0, 0, 0, 0.05);
+  --glow: rgba(0, 0, 0, 0.12);
+  --glow-strong: rgba(0, 0, 0, 0.1);
+  --halo: rgba(0, 0, 0, 0.05);
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: #cfcfcf;
+  --scrollbar-thumb-hover: #b4b4b4;
+
+  --radius: 0.75rem;
+}
+
+/* Dark theme — the signature Scale look */
+.dark {
   --background: #000000;
   --foreground: #ffffff;
 
@@ -16,7 +50,13 @@
 
   --accent: #ffffff;
 
-  --radius: 0.75rem;
+  --grid-line: rgba(255, 255, 255, 0.06);
+  --glow: rgba(255, 255, 255, 0.18);
+  --glow-strong: rgba(255, 255, 255, 0.12);
+  --halo: rgba(255, 255, 255, 0.06);
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #222222;
+  --scrollbar-thumb-hover: #333333;
 }
 
 @theme inline {
@@ -92,6 +132,9 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 /* Tight uppercase label styling used for eyebrow text */
@@ -106,8 +149,8 @@ body {
 /* Subtle moving grid backdrop for the hero */
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
@@ -118,8 +161,8 @@ body {
 }
 
 ::selection {
-  background: #ffffff;
-  color: #000000;
+  background: var(--foreground);
+  color: var(--background);
 }
 
 /* Thin, monochrome scrollbar to match the aesthetic */
@@ -128,14 +171,14 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #000;
+  background: var(--scrollbar-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: var(--scrollbar-thumb);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #333;
+  background: var(--scrollbar-thumb-hover);
 }
 
 @media (prefers-reduced-motion: reduce) {

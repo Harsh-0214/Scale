@@ -22,7 +22,7 @@ function DriftingArrows() {
       {arrows.map((a, i) => (
         <motion.div
           key={i}
-          className="absolute bottom-[-10%] text-white/[0.07]"
+          className="absolute bottom-[-10%] text-foreground/[0.07]"
           style={{ left: a.left }}
           initial={{ y: 0, opacity: 0 }}
           animate={{ y: "-115vh", opacity: [0, 1, 1, 0] }}
@@ -44,24 +44,24 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden bg-black pt-16"
+      className="relative flex min-h-screen items-center overflow-hidden bg-background pt-16"
     >
       {/* Animated grid backdrop */}
       <div className="absolute inset-0 bg-grid mask-radial-fade opacity-70" />
       <DriftingArrows />
       {/* Subtle top glow */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-white/[0.06] blur-[120px]" />
+      <div className="pointer-events-none absolute left-1/2 top-0 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-foreground/[0.06] blur-[120px]" />
 
       <div className="relative mx-auto w-full max-w-5xl px-5 py-24 text-center sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur"
+          className="mb-7 inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-foreground/[0.03] px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur"
         >
           <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-white/60 opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-white" />
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-foreground/60 opacity-75" />
+            <span className="relative inline-flex size-2 rounded-full bg-foreground" />
           </span>
           Predictable lead generation systems for serious operators
         </motion.div>
@@ -70,11 +70,11 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto max-w-4xl text-balance text-5xl font-extrabold leading-[0.98] tracking-[-0.03em] text-white sm:text-6xl md:text-7xl lg:text-[5.25rem]"
+          className="mx-auto max-w-4xl text-balance text-5xl font-extrabold leading-[0.98] tracking-[-0.03em] text-foreground sm:text-6xl md:text-7xl lg:text-[5.25rem]"
         >
           We don&apos;t just grow businesses.{" "}
           <span className="relative inline-block">
-            <span className="bg-gradient-to-b from-white to-white/55 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-foreground to-foreground/55 bg-clip-text text-transparent">
               We multiply them.
             </span>
           </span>
@@ -119,7 +119,7 @@ export function Hero() {
             <li key={pillar} className="flex items-center gap-8">
               <span>{pillar}</span>
               {i < PILLARS.length - 1 && (
-                <span className="text-white/25" aria-hidden>
+                <span className="text-foreground/25" aria-hidden>
                   ×
                 </span>
               )}

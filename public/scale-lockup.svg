@@ -1,8 +1,9 @@
-<svg width="280" height="92" viewBox="0 0 280 92" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scale — We don't just grow businesses. We multiply them.">
-  <g transform="translate(28,2)">
-    <path fill="currentColor" d="M26 4 49 49 38 49 26 23 14 49 3 49Z" />
-    <path fill="currentColor" d="M20 36 32 36 35 43 17 43Z" />
+<svg width="320" height="104" viewBox="0 0 320 104" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scale — We don't just grow businesses. We multiply them.">
+  <g transform="translate(96,8) scale(0.62)">
+    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M32 5 60 59H47L32 27 17 59H4L32 5ZM32 30 44 53H20L32 30Z" />
+    <path fill="currentColor" d="M32 29 41.5 41H35.5V53H28.5V41H22.5L32 29Z" />
   </g>
-  <text x="90" y="40" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="38" letter-spacing="-1.5" fill="currentColor">Scale</text>
-  <text x="30" y="78" font-family="Montserrat, Arial, sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="currentColor" opacity="0.66">WE DON&#39;T JUST GROW. WE MULTIPLY.</text>
+  <text x="142" y="46" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="40" letter-spacing="-1" fill="currentColor">SCALE</text>
+  <text x="160" y="78" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="2.6" fill="currentColor" opacity="0.66">WE DON&#39;T JUST GROW BUSINESSES.</text>
+  <text x="160" y="94" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="11" letter-spacing="2.6" fill="currentColor" opacity="0.66">WE MULTIPLY THEM.</text>
 </svg>

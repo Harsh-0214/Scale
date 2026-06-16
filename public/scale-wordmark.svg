@@ -1,7 +1,7 @@
-<svg width="240" height="56" viewBox="0 0 240 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scale">
-  <g transform="translate(0,2)">
-    <path fill="currentColor" d="M26 4 49 49 38 49 26 23 14 49 3 49Z" />
-    <path fill="currentColor" d="M20 36 32 36 35 43 17 43Z" />
+<svg width="260" height="56" viewBox="0 0 260 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scale">
+  <g transform="translate(2,6) scale(0.7)">
+    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M32 5 60 59H47L32 27 17 59H4L32 5ZM32 30 44 53H20L32 30Z" />
+    <path fill="currentColor" d="M32 29 41.5 41H35.5V53H28.5V41H22.5L32 29Z" />
   </g>
-  <text x="62" y="40" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="38" letter-spacing="-1.5" fill="currentColor">Scale</text>
+  <text x="56" y="42" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="40" letter-spacing="-1" fill="currentColor">SCALE</text>
 </svg>
