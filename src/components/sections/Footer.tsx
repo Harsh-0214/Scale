@@ -6,13 +6,13 @@ import { NAV_LINKS, SOCIALS, CONTACT, SUB_SLOGAN } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black">
+    <footer className="border-t border-foreground/10 bg-background">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <Link
               href="/"
-              className="inline-block text-white"
+              className="inline-block text-foreground"
               aria-label="Scale — home"
             >
               <ScaleWordmark />
@@ -36,7 +36,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-white"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {link.label}
                   </Link>
@@ -45,7 +45,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="text-sm text-muted-foreground transition-colors hover:text-white"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   Book a Call
                 </Link>
@@ -75,7 +75,7 @@ export function Footer() {
                 <li key={social.label}>
                   <a
                     href={social.href}
-                    className="text-xs font-semibold uppercase tracking-[0.12em] text-muted transition-colors hover:text-white"
+                    className="text-xs font-semibold uppercase tracking-[0.12em] text-muted transition-colors hover:text-foreground"
                   >
                     {social.label}
                   </a>
@@ -85,7 +85,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-muted sm:flex-row">
+        <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-foreground/10 pt-8 text-xs text-muted sm:flex-row">
           <p>© {new Date().getFullYear()} Scale. All rights reserved.</p>
           <p>We don&apos;t just grow businesses. We multiply them.</p>
         </div>

@@ -30,7 +30,7 @@ const METRICS = [
 
 export function Results() {
   return (
-    <section id="results" className="bg-black py-28 sm:py-36">
+    <section id="results" className="bg-background py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="The numbers"
@@ -51,16 +51,16 @@ export function Results() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.55, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-8"
+              className="relative overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-8"
             >
-              <div className="text-5xl font-extrabold tracking-[-0.04em] text-white sm:text-6xl">
+              <div className="text-5xl font-extrabold tracking-[-0.04em] text-foreground sm:text-6xl">
                 <AnimatedCounter
                   value={metric.counter.value}
                   prefix={metric.counter.prefix}
                   suffix={metric.counter.suffix}
                 />
               </div>
-              <p className="mt-4 text-base font-semibold text-white">
+              <p className="mt-4 text-base font-semibold text-foreground">
                 {metric.label}
               </p>
               <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">

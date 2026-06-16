@@ -16,14 +16,14 @@ const PAINS = [
 
 export function Problem() {
   return (
-    <section className="relative overflow-hidden bg-black py-28 sm:py-36">
+    <section className="relative overflow-hidden bg-background py-28 sm:py-36">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <div>
           <Reveal>
             <p className="label-eyebrow">The real problem</p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-white sm:text-5xl">
+            <h2 className="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-foreground sm:text-5xl">
               Struggling to get consistent leads?
             </h2>
           </Reveal>
@@ -33,7 +33,7 @@ export function Problem() {
               yourself. At Scale, we build predictable lead generation systems
               that bring in the right clients, consistently. If you&apos;re ready
               to stop chasing and start attracting —{" "}
-              <span className="font-semibold text-white">let&apos;s talk.</span>
+              <span className="font-semibold text-foreground">let&apos;s talk.</span>
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -54,10 +54,10 @@ export function Problem() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="flex items-start gap-4 rounded-xl border border-white/10 bg-white/[0.02] p-5 text-base text-white/80"
+              className="flex items-start gap-4 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-5 text-base text-foreground/80"
             >
               <span
-                className="mt-0.5 text-lg font-bold text-white/30"
+                className="mt-0.5 text-lg font-bold text-foreground/30"
                 aria-hidden
               >
                 ×

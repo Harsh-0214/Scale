@@ -10,9 +10,9 @@ import { SUB_SLOGAN } from "@/lib/site";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-black py-32 sm:py-44">
+    <section className="relative overflow-hidden bg-background py-32 sm:py-44">
       <div className="absolute inset-0 bg-grid mask-radial-fade opacity-50" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.07] blur-[130px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground/[0.07] blur-[130px]" />
 
       <div className="relative mx-auto max-w-4xl px-5 text-center sm:px-8">
         <motion.h2
@@ -20,7 +20,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-60px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-balance text-4xl font-extrabold leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl md:text-7xl"
+          className="text-balance text-4xl font-extrabold leading-[1.02] tracking-[-0.03em] text-foreground sm:text-6xl md:text-7xl"
         >
           Ready to stop chasing
           <br className="hidden sm:block" /> and start attracting?
@@ -59,7 +59,7 @@ export function FinalCTA() {
           transition={{ duration: 0.9, delay: 0.4 }}
           className="mt-20 flex flex-col items-center gap-6"
         >
-          <ScaleLockup className="text-white" />
+          <ScaleLockup className="text-foreground" />
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-muted">
             {SUB_SLOGAN}
           </p>

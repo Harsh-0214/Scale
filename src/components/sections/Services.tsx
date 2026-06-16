@@ -48,7 +48,7 @@ const SERVICES: { icon: LucideIcon; title: string; copy: string }[] = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-black py-28 sm:py-36">
+    <section id="services" className="bg-background py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="What we do"
@@ -68,12 +68,12 @@ export function Services() {
                 delay: (i % 3) * 0.1,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="group relative flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.02] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-white/40 hover:bg-white/[0.04]"
+              className="group relative flex flex-col gap-4 rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-foreground/40 hover:bg-foreground/[0.04]"
             >
-              <div className="flex size-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white transition-colors group-hover:border-white/30">
+              <div className="flex size-12 items-center justify-center rounded-xl border border-foreground/10 bg-foreground/[0.03] text-foreground transition-colors group-hover:border-foreground/30">
                 <service.icon className="size-6" strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold tracking-tight text-white">
+              <h3 className="text-xl font-bold tracking-tight text-foreground">
                 {service.title}
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">

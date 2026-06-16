@@ -63,7 +63,7 @@ export function Testimonials() {
   const active = TESTIMONIALS[index];
 
   return (
-    <section className="border-y border-white/10 bg-black py-28 sm:py-36">
+    <section className="border-y border-foreground/10 bg-background py-28 sm:py-36">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Proof"
@@ -82,7 +82,7 @@ export function Testimonials() {
           tabIndex={0}
         >
           <Quote
-            className="mx-auto mb-8 size-10 text-white/15"
+            className="mx-auto mb-8 size-10 text-foreground/15"
             aria-hidden
           />
 
@@ -98,18 +98,18 @@ export function Testimonials() {
                 className="flex flex-col items-center text-center"
                 aria-live="polite"
               >
-                <p className="text-balance text-2xl font-medium leading-snug tracking-tight text-white sm:text-3xl">
+                <p className="text-balance text-2xl font-medium leading-snug tracking-tight text-foreground sm:text-3xl">
                   &ldquo;{active.quote}&rdquo;
                 </p>
                 <footer className="mt-8 flex items-center gap-4">
                   <span
-                    className="flex size-12 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-sm font-bold text-white"
+                    className="flex size-12 items-center justify-center rounded-full border border-foreground/15 bg-foreground/[0.04] text-sm font-bold text-foreground"
                     aria-hidden
                   >
                     {active.initials}
                   </span>
                   <span className="text-left">
-                    <span className="block font-semibold text-white">
+                    <span className="block font-semibold text-foreground">
                       {active.name}
                     </span>
                     <span className="block text-sm text-muted">
@@ -125,7 +125,7 @@ export function Testimonials() {
             <button
               type="button"
               onClick={() => paginate(-1)}
-              className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 text-white transition-colors hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="inline-flex size-11 items-center justify-center rounded-full border border-foreground/15 text-foreground transition-colors hover:border-foreground/50 hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label="Previous testimonial"
             >
               <ArrowLeft className="size-5" />
@@ -146,8 +146,8 @@ export function Testimonials() {
                   className={cn(
                     "h-2 rounded-full transition-all duration-300",
                     i === index
-                      ? "w-7 bg-white"
-                      : "w-2 bg-white/25 hover:bg-white/50",
+                      ? "w-7 bg-foreground"
+                      : "w-2 bg-foreground/25 hover:bg-foreground/50",
                   )}
                 />
               ))}
@@ -156,7 +156,7 @@ export function Testimonials() {
             <button
               type="button"
               onClick={() => paginate(1)}
-              className="inline-flex size-11 items-center justify-center rounded-full border border-white/15 text-white transition-colors hover:border-white/50 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              className="inline-flex size-11 items-center justify-center rounded-full border border-foreground/15 text-foreground transition-colors hover:border-foreground/50 hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-label="Next testimonial"
             >
               <ArrowRight className="size-5" />

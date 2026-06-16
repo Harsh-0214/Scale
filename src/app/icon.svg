@@ -1,5 +1,13 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" fill="#000000" />
-  <path fill="#ffffff" d="M32 9 57 55 45 55 32 30 19 55 7 55Z" />
-  <path fill="#ffffff" d="M26 42 38 42 41 49 23 49Z" />
+  <style>
+    .bg { fill: #000000; }
+    .mark { fill: #ffffff; }
+    @media (prefers-color-scheme: light) {
+      .bg { fill: #ffffff; }
+      .mark { fill: #0a0a0a; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="12" />
+  <path class="mark" fill-rule="evenodd" clip-rule="evenodd" d="M32 7 58 57H47L32 28 17 57H6L32 7ZM32 31 43 53H21L32 31Z" />
+  <path class="mark" d="M32 30 40.5 41H35V53H29V41H23.5L32 30Z" />
 </svg>

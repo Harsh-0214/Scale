@@ -68,7 +68,7 @@ const TIERS: Tier[] = [
 
 export function Packages() {
   return (
-    <section id="packages" className="bg-black py-28 sm:py-36">
+    <section id="packages" className="bg-background py-28 sm:py-36">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Packages"
@@ -87,12 +87,12 @@ export function Packages() {
               className={cn(
                 "relative flex flex-col rounded-3xl border p-8",
                 tier.featured
-                  ? "border-white bg-white text-black shadow-[0_0_60px_rgba(255,255,255,0.12)] lg:-my-4 lg:py-12"
-                  : "border-white/12 bg-white/[0.02] text-white",
+                  ? "border-foreground bg-foreground text-background shadow-[0_0_60px_var(--glow-strong)] lg:-my-4 lg:py-12"
+                  : "border-foreground/12 bg-foreground/[0.02] text-foreground",
               )}
             >
               {tier.featured && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-black px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white ring-1 ring-white/20">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-background px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-foreground ring-1 ring-foreground/20">
                   Recommended
                 </span>
               )}
@@ -103,7 +103,7 @@ export function Packages() {
               <p
                 className={cn(
                   "mt-1 text-sm",
-                  tier.featured ? "text-black/60" : "text-muted-foreground",
+                  tier.featured ? "text-background/60" : "text-muted-foreground",
                 )}
               >
                 {tier.tagline}
@@ -116,7 +116,7 @@ export function Packages() {
                 <span
                   className={cn(
                     "text-sm",
-                    tier.featured ? "text-black/50" : "text-muted",
+                    tier.featured ? "text-background/50" : "text-muted",
                   )}
                 >
                   {tier.cadence}
@@ -129,12 +129,12 @@ export function Packages() {
                     <Check
                       className={cn(
                         "mt-0.5 size-4 shrink-0",
-                        tier.featured ? "text-black" : "text-white",
+                        tier.featured ? "text-background" : "text-foreground",
                       )}
                     />
                     <span
                       className={
-                        tier.featured ? "text-black/80" : "text-white/80"
+                        tier.featured ? "text-background/80" : "text-foreground/80"
                       }
                     >
                       {feature}

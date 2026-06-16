@@ -33,7 +33,7 @@ export function HowItWorks() {
   return (
     <section
       id="process"
-      className="border-y border-white/10 bg-black py-28 sm:py-36"
+      className="border-y border-foreground/10 bg-background py-28 sm:py-36"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
@@ -45,7 +45,7 @@ export function HowItWorks() {
         <ol className="relative mt-16 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
           {/* Connecting line across steps (desktop) */}
           <div
-            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-white/20 to-transparent md:block"
+            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-foreground/20 to-transparent md:block"
             aria-hidden
           />
           {STEPS.map((step, i) => (
@@ -57,13 +57,13 @@ export function HowItWorks() {
               transition={{ duration: 0.5, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
               className="relative flex flex-col items-start"
             >
-              <div className="relative z-10 flex size-14 items-center justify-center rounded-full border border-white/15 bg-black text-white">
+              <div className="relative z-10 flex size-14 items-center justify-center rounded-full border border-foreground/15 bg-background text-foreground">
                 <step.icon className="size-6" strokeWidth={1.5} />
-                <span className="absolute -right-1 -top-1 flex size-6 items-center justify-center rounded-full bg-white text-xs font-bold text-black">
+                <span className="absolute -right-1 -top-1 flex size-6 items-center justify-center rounded-full bg-foreground text-xs font-bold text-background">
                   {i + 1}
                 </span>
               </div>
-              <h3 className="mt-6 text-xl font-bold tracking-tight text-white">
+              <h3 className="mt-6 text-xl font-bold tracking-tight text-foreground">
                 {step.title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

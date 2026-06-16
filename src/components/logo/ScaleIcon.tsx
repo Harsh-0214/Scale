@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
 
 /**
- * The arrow-A mark on its own (square). Color is driven by `currentColor`,
- * so set it via the `text-*` class on a parent or directly here.
+ * The "A" mark from the SCALE logo: a bold triangular A whose counter is
+ * carved into an upward arrow — "we multiply" growth in a single glyph.
  *
- * Placeholder rendition of the brand mark — drop in the final
- * `scale-icon.svg` artwork by replacing the paths below (or swap this
- * component for an <img src="/scale-icon.svg" />) when the assets land.
+ * Color is driven by `currentColor`, so it inherits the surrounding text
+ * color and adapts automatically to light / dark themes. Set it via a
+ * `text-*` class on a parent (or directly here).
  */
 export function ScaleIcon({
   className,
@@ -24,8 +24,18 @@ export function ScaleIcon({
       className={cn("h-6 w-6", className)}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path fill="currentColor" d="M32 5 60 59 47 59 32 27 17 59 4 59Z" />
-      <path fill="currentColor" d="M25 43 39 43 42.5 51 21.5 51Z" />
+      {/* A shell: outer triangle with a hollow triangular counter */}
+      <path
+        fill="currentColor"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M32 5 60 59H47L32 27 17 59H4L32 5ZM32 30 44 53H20L32 30Z"
+      />
+      {/* Upward arrow nested inside the counter */}
+      <path
+        fill="currentColor"
+        d="M32 29 41.5 41H35.5V53H28.5V41H22.5L32 29Z"
+      />
     </svg>
   );
 }

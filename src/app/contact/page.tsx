@@ -35,14 +35,14 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="relative overflow-hidden bg-black pb-24 pt-28 sm:pt-36">
+      <main className="relative overflow-hidden bg-background pb-24 pt-28 sm:pt-36">
         <div className="absolute inset-0 bg-grid mask-radial-fade opacity-40" />
-        <div className="pointer-events-none absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.06] blur-[120px]" />
+        <div className="pointer-events-none absolute left-1/2 top-0 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground/[0.06] blur-[120px]" />
 
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-white"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             <ArrowLeft className="size-4" />
             Back to home
@@ -50,8 +50,8 @@ export default function ContactPage() {
 
           <div className="mt-10 grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
             <div>
-              <ScaleIcon className="h-10 w-10 text-white" />
-              <h1 className="mt-7 text-balance text-4xl font-extrabold leading-[1.03] tracking-[-0.03em] text-white sm:text-5xl">
+              <ScaleIcon className="h-10 w-10 text-foreground" />
+              <h1 className="mt-7 text-balance text-4xl font-extrabold leading-[1.03] tracking-[-0.03em] text-foreground sm:text-5xl">
                 Let&apos;s build your growth machine.
               </h1>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-muted-foreground">
@@ -63,11 +63,11 @@ export default function ContactPage() {
               <ul className="mt-10 flex flex-col gap-6">
                 {PROMISES.map((promise) => (
                   <li key={promise.title} className="flex items-start gap-4">
-                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-white">
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-foreground/10 bg-foreground/[0.03] text-foreground">
                       <promise.icon className="size-5" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <h2 className="font-semibold text-white">
+                      <h2 className="font-semibold text-foreground">
                         {promise.title}
                       </h2>
                       <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
@@ -79,7 +79,7 @@ export default function ContactPage() {
               </ul>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/[0.015] p-6 sm:p-9">
+            <div className="rounded-3xl border border-foreground/10 bg-foreground/[0.015] p-6 sm:p-9">
               <ContactForm />
             </div>
           </div>
