@@ -32,7 +32,7 @@ export function Pillars() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="group flex flex-col gap-4 px-8 py-12 transition-colors hover:bg-foreground/[0.02]"
+            className="group flex flex-col gap-4 px-5 py-8 transition-colors hover:bg-foreground/[0.02] sm:px-8 sm:py-12"
           >
             <pillar.icon
               className="size-8 text-foreground transition-transform duration-300 group-hover:-translate-y-1"

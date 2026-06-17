@@ -100,7 +100,7 @@ export function ContactForm() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col items-center rounded-2xl border border-foreground/12 bg-foreground/[0.02] px-8 py-16 text-center"
+            className="flex flex-col items-center rounded-2xl border border-foreground/12 bg-foreground/[0.02] px-5 py-12 text-center sm:px-8 sm:py-16"
             role="status"
             aria-live="polite"
           >
@@ -117,7 +117,7 @@ export function ContactForm() {
             >
               <Check className="size-8" strokeWidth={2.5} />
             </motion.div>
-            <h2 className="mt-7 text-3xl font-extrabold tracking-tight text-foreground">
+            <h2 className="mt-7 text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl">
               You&apos;re in. We&apos;ll be in touch.
             </h2>
             <p className="mt-3 max-w-md text-muted-foreground">

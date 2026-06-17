@@ -52,7 +52,7 @@ export function Hero() {
       {/* Subtle top glow */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/3 rounded-full bg-foreground/[0.06] blur-[120px]" />
 
-      <div className="relative mx-auto w-full max-w-5xl px-5 py-24 text-center sm:px-8">
+      <div className="relative mx-auto w-full max-w-5xl px-5 py-16 text-center sm:px-8 sm:py-24">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto max-w-4xl text-balance text-5xl font-extrabold leading-[0.98] tracking-[-0.03em] text-foreground sm:text-6xl md:text-7xl lg:text-[5.25rem]"
+          className="mx-auto max-w-4xl text-balance text-4xl font-extrabold leading-[0.98] tracking-[-0.03em] text-foreground sm:text-5xl md:text-6xl lg:text-7xl xl:text-[5.25rem]"
         >
           We don&apos;t just grow businesses.{" "}
           <span className="relative inline-block">
@@ -84,7 +84,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-xl"
+          className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:mt-7 sm:text-lg md:text-xl"
         >
           We build the systems that bring the right clients to your door —
           consistently. Stop chasing leads and start attracting them.
@@ -113,7 +113,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-semibold uppercase tracking-[0.18em] text-muted"
+          className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted sm:mt-14 sm:gap-x-8 sm:gap-y-3 sm:text-sm"
         >
           {PILLARS.map((pillar, i) => (
             <li key={pillar} className="flex items-center gap-8">

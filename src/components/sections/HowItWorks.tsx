@@ -33,7 +33,7 @@ export function HowItWorks() {
   return (
     <section
       id="process"
-      className="border-y border-foreground/10 bg-background py-28 sm:py-36"
+      className="border-y border-foreground/10 bg-background py-16 sm:py-28 md:py-36"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
@@ -42,7 +42,7 @@ export function HowItWorks() {
           description="No black boxes. A proven four-stage process that takes you from inconsistent to unstoppable."
         />
 
-        <ol className="relative mt-16 grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
+        <ol className="relative mt-12 grid grid-cols-1 gap-8 sm:mt-16 md:grid-cols-4 md:gap-6">
           {/* Connecting line across steps (desktop) */}
           <div
             className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-foreground/20 to-transparent md:block"

@@ -63,7 +63,7 @@ export function Testimonials() {
   const active = TESTIMONIALS[index];
 
   return (
-    <section className="border-y border-foreground/10 bg-background py-28 sm:py-36">
+    <section className="border-y border-foreground/10 bg-background py-16 sm:py-28 md:py-36">
       <div className="mx-auto max-w-4xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Proof"
@@ -86,7 +86,7 @@ export function Testimonials() {
             aria-hidden
           />
 
-          <div className="relative min-h-[16rem] overflow-hidden sm:min-h-[13rem]">
+          <div className="relative min-h-[14rem] overflow-hidden sm:min-h-[12rem] md:min-h-[13rem]">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.blockquote
                 key={index}
@@ -98,7 +98,7 @@ export function Testimonials() {
                 className="flex flex-col items-center text-center"
                 aria-live="polite"
               >
-                <p className="text-balance text-2xl font-medium leading-snug tracking-tight text-foreground sm:text-3xl">
+                <p className="text-balance text-lg font-medium leading-snug tracking-tight text-foreground sm:text-2xl md:text-3xl">
                   &ldquo;{active.quote}&rdquo;
                 </p>
                 <footer className="mt-8 flex items-center gap-4">

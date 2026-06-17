@@ -16,14 +16,14 @@ const PAINS = [
 
 export function Problem() {
   return (
-    <section className="relative overflow-hidden bg-background py-28 sm:py-36">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
+    <section className="relative overflow-hidden bg-background py-16 sm:py-28 md:py-36">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 sm:gap-16 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <div>
           <Reveal>
             <p className="label-eyebrow">The real problem</p>
           </Reveal>
           <Reveal delay={0.05}>
-            <h2 className="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-[-0.03em] text-foreground sm:text-5xl">
+            <h2 className="mt-5 text-balance text-3xl font-extrabold leading-[1.05] tracking-[-0.03em] text-foreground sm:text-4xl md:text-5xl">
               Struggling to get consistent leads?
             </h2>
           </Reveal>
