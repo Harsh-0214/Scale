@@ -2,39 +2,44 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUp, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { PILLARS } from "@/lib/site";
 
-/** Faint upward arrows drifting up the screen — the "growth" motif. */
+const ARROWS = [
+  { left: "12%", size: 22, delay: "0s",   duration: "9s"  },
+  { left: "27%", size: 14, delay: "2.5s", duration: "11s" },
+  { left: "48%", size: 18, delay: "1.2s", duration: "10s" },
+  { left: "68%", size: 12, delay: "3.4s", duration: "12s" },
+  { left: "83%", size: 24, delay: "0.6s", duration: "9.5s"},
+];
+
 function DriftingArrows() {
-  const arrows = [
-    { left: "12%", size: 22, delay: 0, duration: 9 },
-    { left: "27%", size: 14, delay: 2.5, duration: 11 },
-    { left: "48%", size: 18, delay: 1.2, duration: 10 },
-    { left: "68%", size: 12, delay: 3.4, duration: 12 },
-    { left: "83%", size: 24, delay: 0.6, duration: 9.5 },
-    { left: "92%", size: 14, delay: 2, duration: 13 },
-  ];
   return (
-    <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      {arrows.map((a, i) => (
-        <motion.div
+    <div className="pointer-events-none absolute inset-0 hidden overflow-hidden sm:block">
+      {ARROWS.map((a, i) => (
+        <svg
           key={i}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden
           className="absolute bottom-[-10%] text-foreground/[0.07]"
-          style={{ left: a.left }}
-          initial={{ y: 0, opacity: 0 }}
-          animate={{ y: "-115vh", opacity: [0, 1, 1, 0] }}
-          transition={{
-            duration: a.duration,
-            delay: a.delay,
-            repeat: Infinity,
-            ease: "linear",
+          style={{
+            left: a.left,
+            width: a.size,
+            height: a.size,
+            animation: `drift-up ${a.duration} ${a.delay} linear infinite`,
           }}
         >
-          <ArrowUp style={{ width: a.size, height: a.size }} />
-        </motion.div>
+          <path d="m5 12 7-7 7 7" />
+          <path d="M12 19V5" />
+        </svg>
       ))}
     </div>
   );

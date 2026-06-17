@@ -109,57 +109,37 @@ export function Navbar() {
         </div>
       </nav>
 
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {open && (
           <motion.div
             id="mobile-menu"
             key="mobile-menu"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             className="fixed inset-0 top-16 z-40 flex flex-col bg-background md:hidden"
           >
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={{
-                visible: { transition: { staggerChildren: 0.07, delayChildren: 0.05 } },
-              }}
-              className="flex flex-1 flex-col px-6 pt-10"
-            >
+            <div className="flex flex-1 flex-col px-6 pt-10">
               {NAV_LINKS.map((link) => (
-                <motion.div
+                <Link
                   key={link.href}
-                  variants={{
-                    hidden: { opacity: 0, x: -20 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="block border-b border-foreground/10 py-5 text-2xl font-bold tracking-tight text-foreground sm:text-3xl"
                 >
-                  <Link
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="block border-b border-foreground/10 py-5 text-3xl font-bold tracking-tight text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
+                  {link.label}
+                </Link>
               ))}
 
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 12 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-                className="mt-10"
-              >
+              <div className="mt-10">
                 <Button asChild size="lg" className="w-full">
                   <Link href="/contact" onClick={() => setOpen(false)}>
                     Book a Call
                   </Link>
                 </Button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
 
             <div className="flex items-center justify-center gap-3 py-10 text-muted">
               <ScaleIcon className="h-6 w-6" />
