@@ -9,9 +9,9 @@ export const NAV_LINKS = [
 ] as const;
 
 export const CONTACT = {
-  email: "[Your Email]",
+  email: "scalxeleads@gmail.com",
   phone: "[Your Number]",
-  website: "[Your Website]",
+  website: "scalxeleads.ca",
 } as const;
 
 export const SOCIALS = [
