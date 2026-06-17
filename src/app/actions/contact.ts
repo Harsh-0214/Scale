@@ -17,7 +17,7 @@ export async function sendContactEmail(
 ): Promise<{ ok: boolean; error?: string }> {
   try {
     await resend.emails.send({
-      from: "Scale Enquiries <onboarding@resend.dev>",
+      from: "Scale <noreply@scalxeleads.com>",
       to: "scalxeleads@gmail.com",
       replyTo: payload.email,
       subject: `New enquiry from ${payload.name} — ${payload.business}`,
