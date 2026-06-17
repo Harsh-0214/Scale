@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sendContactEmail } from "@/app/actions/contact";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Check, Loader2 } from "lucide-react";
 
@@ -80,9 +81,12 @@ export function ContactForm() {
     if (Object.keys(nextErrors).length > 0) return;
 
     setStatus("submitting");
-    // No backend needed — log the payload and simulate a network round-trip.
-    console.log("Scale — new enquiry:", fields);
-    await new Promise((resolve) => setTimeout(resolve, 900));
+    const result = await sendContactEmail(fields);
+    if (!result.ok) {
+      setErrors({ message: "Something went wrong. Please try again." });
+      setStatus("idle");
+      return;
+    }
     setStatus("success");
   };
 
